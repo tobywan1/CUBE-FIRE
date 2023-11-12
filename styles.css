@@ -1,0 +1,475 @@
+
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+}
+
+
+.cube-container {
+    display: flex;
+    perspective: 800px;
+    margin: 100px auto;
+    flex-direction: row;
+}
+
+.cube-container:nth-child(1) {
+    animation: bounce1 5s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(2) {
+    animation: bounce2 5s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(3) {
+    animation: bounce3 5s infinite alternate ease-in-out;
+}
+
+@keyframes bounce1 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(200px);
+    }
+}
+
+@keyframes bounce2 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(200px);
+    }
+}
+
+@keyframes bounce3 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(200px);
+    }
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.front  { transform: rotateY(0deg) translateZ(100px); background: red; }
+.back   { transform: rotateY(180deg) translateZ(100px); background: yellow; }
+.right  { transform: rotateY(90deg) translateZ(100px); background: green; }
+.left   { transform: rotateY(-90deg) translateZ(100px); background: orange; }
+.top    { transform: rotateX(90deg) translateZ(100px); background: black; }
+.bottom { transform: rotateX(-90deg) translateZ(100px); background: white; }
+
+.cube-container:nth-child(1) {
+    animation: bounce1 5s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(2) {
+    animation: bounce2 5s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(3) {
+    animation: bounce3 5s infinite alternate ease-in-out;
+}
+
+@keyframes bounce1 {
+    0%, 100% {
+        transform: translate(-200px, -200px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce2 {
+    0%, 100% {
+        transform: translate(200px, -200px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce3 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(200px);
+    }
+}
+.cube-container:nth-child(1) {
+    animation: bounce1 5s infinite alternate ease-in-out, rotate1 10s infinite linear, circle1 10s infinite linear, shine 3s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(2) {
+    animation: bounce2 5s infinite alternate ease-in-out, rotate2 10s infinite linear, circle2 10s infinite linear, shine 3s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(3) {
+    animation: rotate3 10s infinite linear, shine 3s infinite alternate ease-in-out;
+}
+
+@keyframes bounce1 {
+    0%, 100% {
+        transform: translate(-200px, -200px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce2 {
+    0%, 100% {
+        transform: translate(200px, -200px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circle1 {
+    0% {
+        transform: translate(-200px, -200px) rotate(0deg) translateX(200px);
+    }
+    100% {
+        transform: translate(-200px, -200px) rotate(360deg) translateX(200px);
+    }
+}
+
+@keyframes circle2 {
+    0% {
+        transform: translate(200px, -200px) rotate(0deg) translateX(-200px);
+    }
+    100% {
+        transform: translate(200px, -200px) rotate(360deg) translateX(-200px);
+    }
+}
+
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 20px rgba(220, 26, 26, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(65, 10, 120, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(46, 193, 12, 0.5);
+    }
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    background: rgba(244, 18, 18, 0.9);
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-in-out; /* Add smooth transition for the shine effect */
+}
+
+.cube-container:nth-child(1) .front {
+    background: linear-gradient(to bottom, rgba(75, 19, 218, 0.9), rgba(196, 219, 21, 0.5), transparent);
+    animation: beam1 3s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(2) .front {
+    background: linear-gradient(to bottom, rgba(202, 16, 222, 0.9), rgba(234, 32, 32, 0.5), transparent);
+    animation: beam2 3s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(3) .front {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(177, 43, 43, 0.5), transparent);
+    animation: beam3 3s infinite alternate ease-in-out;
+}
+
+@keyframes beam1 {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+}
+
+@keyframes beam2 {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+}
+
+@keyframes beam3 {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+}
+
+.cube-container:nth-child(1) {
+    animation: fight1 5s infinite alternate ease-in-out, light1 3s infinite alternate ease-in-out, colorChange1 5s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(2) {
+    animation: fight2 5s infinite alternate ease-in-out, light2 3s infinite alternate ease-in-out, colorChange2 5s infinite alternate ease-in-out;
+}
+
+.cube-container:nth-child(3) {
+    animation: fight3 5s infinite alternate ease-in-out, light3 3s infinite alternate ease-in-out, colorChange3 5s infinite alternate ease-in-out;
+}
+
+@keyframes fight1 {
+    0%, 100% {
+        transform: translate(-200px, -200px);
+    }
+    50% {
+        transform: translateY(0) translateX(200px);
+    }
+}
+
+@keyframes fight2 {
+    0%, 100% {
+        transform: translate(200px, -200px);
+    }
+    50% {
+        transform: translateY(0) translateX(-200px);
+    }
+}
+
+@keyframes fight3 {
+    0%, 100% {
+        transform: translateY(200px);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+}
+
+@keyframes light1 {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(29, 7, 7, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(12, 218, 215, 0.8);
+    }
+}
+
+@keyframes light2 {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(233, 14, 149, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    }
+}
+
+@keyframes light3 {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(222, 233, 8, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(17, 65, 132, 0.8);
+    }
+}
+
+@keyframes colorChange1 {
+    0%, 100% {
+        background-color: rgba(255, 0, 0, 0.9);
+    }
+    50% {
+        background-color: rgba(255, 157, 0, 0.9);
+    }
+}
+
+@keyframes colorChange2 {
+    0%, 100% {
+        background-color: rgba(0, 255, 0, 0.9);
+    }
+    50% {
+        background-color: rgba(255, 0, 0, 0.9);
+    }
+}
+
+@keyframes colorChange3 {
+    0%, 100% {
+        background-color: rgba(0, 0, 255, 0.9);
+    }
+    50% {
+        background-color: rgba(0, 255, 0, 0.9);
+    }
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    background: rgba(255, 0, 0, 0.9); /* Initial color */
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.5s ease-in-out; /* Add smooth transitions */
+}
+
+.cube-container .sword {
+    position: absolute;
+    width: 20px;
+    height: 200px;
+    background-color: silver;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.cube-container .sword::before,
+.cube-container .sword::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100px;
+    background-color: silver;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cube-container .sword::after {
+    top: 100px;
+}
+
+.cube-container:nth-child(1) .sword {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg) scaleX(-1); /* Flip sword for the first cube */
+}
+
+.cube-container:nth-child(2) .sword {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg) scaleY(-1); /* Flip sword for the second cube */
+}
+
+@keyframes fight1 {
+    0%, 100% {
+        transform: translate(-200px, -200px);
+    }
+    50% {
+        transform: translateY(0) translateX(200px);
+    }
+}
+
+@keyframes fight2 {
+    0%, 100% {
+        transform: translate(200px, -200px);
+    }
+    50% {
+        transform: translateY(0) translateX(-200px);
+    }
+}
+
+@keyframes fight3 {
+    0%, 100% {
+        transform: translateY(200px);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.5s ease-in-out; /* Add smooth transitions */
+    overflow: hidden;
+}
+
+.face::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gold;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh;
+    background-color: #111;
+}
+
+.flame {
+    position: relative;
+    width: 50px;
+    height: 100px;
+    background-color: #ff4500;
+    margin: 0 5px;
+    border-radius: 10px 10px 0 0;
+    animation: flicker 0.1s infinite alternate;
+}
+
+@keyframes flicker {
+    to {
+        transform: scaleY(0.9) rotateX(10deg);
+        box-shadow: 0 0 30px 10px #ff4500;
+    }
+}
+
+.flame:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #ff4500;
+    border-radius: 50%;
+}
